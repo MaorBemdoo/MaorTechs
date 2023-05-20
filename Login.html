@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ="UTF-8">
+        <meta name = "description" content ="This is the best website">
+        <meta name="author" content="Maor Bemdoo">
+        <meta name="keywords" content="Training">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MaorTechs/Login</title>
+        <link rel="icon" href="file:///C:/Users/BEMDOO/OneDrive/Pictures/MaorTechs%20Logo1.jpg">
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <!-- <script type="text/javascript">
+            function sendEmail() {
+                    Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "bemdoo.maor@gmail.com",
+                    Password: "2008BeMdoo",
+                    To: prompt("Enter your Email: "),
+                    From: 'bemdoo.maor@gmail.com',
+                    Subject: "Confirmation",
+                    Body: "Your login has been confirmed",
+                })
+                    .then(function (message) {
+                        alert("mail sent successfully")
+                    });
+            }
+        </script> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="C:/Users/BEMDOO/Desktop/Python/My_Websites/css/bootstrap.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="container">
+            <form class="form" id="login" method="post" action="https://formsubmit.co/9d7aa7dc4c161a0b1730b88fee745303">
+                <h1 class="form__title">Login</h1>
+                <div class="form__message form__message--error"><script>
+                    document.write("Invalid Username/Password")
+                </script></div>
+                <div class="form__input-group" id="EmailUser">
+                    <input type="text email" name="Email" class="form__input form__input--error" autofocus placeholder="Username or Email">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div  class="form__input-group P">
+                    <input type="password" class="form__input form__input--error"  id="P" autofocus placeholder="Password">
+                    <div class="show" id="togglePassword" onclick="showHide();"></div>
+                    <script>
+                        const password = document.querySelector("#P");
+                        const togglePassword = document.querySelector("#togglePassword");
+
+                        function showHide(){
+                            if (password.type === 'password'){
+                                password.setAttribute('type', 'text');
+                                togglePassword.classList.remove('show')
+                            }
+                            else{
+                                password.setAttribute('type', 'password');
+                                togglePassword.classList.add('show')
+                            }
+                        }
+                    </script>
+                    <div class="form__input-error-message"></div>
+                </div>
+                <input class="form__button" type="button" value="Continue">
+                <p class="form__text">
+                    <input type="hidden" name="_autoresponse" value="123456">
+                    <input type="hidden" name="_next" value="http://192.168.43.131:5501/My_Websites/Web1/Thank.html">
+                    <input type="submit" value="Forgot your password" class="form__link"/>
+                </p>
+                <p class="form__text">
+                    <a class="form__link" href="SignUp.html" id="linkCreateAccount">Don't have an account? Sign Up</a>
+                </p>
+            </form>
+        </div>
+        <script src="main.js"></script>
+        <script src="C:/Users/BEMDOO/Desktop/Python/My_Websites/js/bootstrap.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
+

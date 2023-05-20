@@ -1,0 +1,162 @@
+body{
+    --color-primary: #009579;
+    --color-primary-dark: #007f67;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+    
+    padding: 0 !important;
+    margin:0 !important;
+    box-sizing: border-box;
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 18px !important;
+    background: url(https://assets.entrepreneur.com/content/3x2/2000/20150708172005-coding-working-workspace-apple-macintosh.jpeg);
+    background-size: cover;
+}
+
+.container{
+    width: 400px !important;
+    max-width: 400px;
+    margin: 1rem !important;
+    padding: 2rem !important;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) !important;
+    border-radius: var(--border-radius) !important;
+    background: #ffffff !important;
+}
+
+.container,
+.form__input,
+.form__button{
+    font: 500 1rem 'Quicksand', sans-serif !important;
+}
+
+.form--hidden{
+    display: none !important;
+}
+
+.form>*:first-child{
+    margin-top: 0 !important;
+}
+
+.form>*:last-child{
+    margin-bottom: 0 !important;
+}
+
+.form__title{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form__message{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form__message--success{
+    color: var(--color-success);
+}
+
+.form__message--error{
+    color: var(--color-error);
+}
+
+.form__input-group{
+    margin-bottom: 1rem !important;
+}
+
+.form__input{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box; 
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.form__input:focus{
+    border-color: var(--color-primary);
+    background: #ffffff;
+}
+
+.form__input--error{
+    border: 1px solid var(--color-error) !important;
+}
+
+.form__input-error-message{
+    margin-top: 0.5rem !important;
+    font-size: 0.85rem !important;
+    color: var(--color-error);
+}
+
+.form__button{
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none !important;
+    cursor: pointer;
+    background: var(--color-primary);
+    text-decoration: none !important;
+}
+
+.form__button:hover{
+    background: var(--color-primary-dark);
+}
+
+.form__button:active{
+    transform: scale(0.98);
+}
+
+.form__text{
+    text-align: center !important;
+}
+
+.form__link{
+    color: var(--color-secondary);
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.form__link:hover{
+    text-decoration: underline !important;
+    color: initial;
+}
+
+.P{
+    position: relative;
+}
+
+#togglePassword{
+    position: absolute;
+    top: 23px;
+    transform: translateY(-50%);
+    margin-left: 300px;
+    width: 30px;
+    height: 30px;
+    background: url(Hide.png);
+    background-size: cover;
+    background-color: transparent;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#togglePassword.show{
+    background: url(Show.png);
+    background-size: cover;
+    background-color: transparent;
+}
+
+#un, #PP, #eam{
+    text-align: left;
+}
