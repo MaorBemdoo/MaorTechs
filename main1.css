@@ -99,6 +99,19 @@ noscript{
     color: crimson;
 }
 
+.LoginM{
+    visibility: hidden;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000000;
+    height: 200px;
+    width: 200px;
+}
+
 .item1-item{
     color:white; 
     padding: 0px 12px;

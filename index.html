@@ -44,6 +44,9 @@
                 <a href="Login.html"><button>Logout</button></a>
             </div>
         </aside>
+        <div class="LoginM blackGlass" id="lM">
+            Login <br> or <br> Signup <br> to continue viewing this page
+        </div>
         <section id="hero">
             <div class="hero container">
                 <div class="div">
@@ -65,7 +68,7 @@
                             }
                         </script> -->
                         <script>
-                            if(localStorage.getItem("MaorTechsUserData") == null){
+                            if(localStorage.getItem("MaorTechsUserData") == null || JSON.parse(localStorage.getItem("MaorTechsUserData")).UserName == ""){
                                 document.write("Unknown")
                             } else{
                                 document.write(JSON.parse(localStorage.getItem("MaorTechsUserData")).UserName)

@@ -163,7 +163,7 @@ sideBarLinks.forEach(link => {
 const item1 = document.querySelectorAll(".item1-item h2");
 const asideItem1 = document.querySelectorAll("#_sl a h2");
 window.onscroll = (e) => {
-    const scroll = window.scrollY
+    let scroll = window.scrollY
     item1.forEach(item => {
         if(scroll > 723 && scroll < 1733){
             // item.classList.add("activeNav")
@@ -197,6 +197,28 @@ window.onscroll = (e) => {
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.remove("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.classList.add("activeNav")
         }
+    })
+}
+
+if(localStorage.getItem("MaorTechsUserData") == null || JSON.parse(localStorage.getItem("MaorTechsUserData")).UserName == ""){
+    let scrollY = window.scrollY
+    const LoginModal = document.getElementsByClassName("LoginM")[0]
+    // if(scrollY >= 709){
+    //     LoginModal.st
+    // }
+    item1.forEach(item11 => {
+        item11.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.textContent = "SignUp"
+        // item11.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.insertAdjacentElement(10, '<a href="Login.html" class="item1-item" style="color:crimson;"><h2>Login</h2></a>')
+    })
+    asideItem1.forEach(asideItem11 => {
+        asideItem11.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.textContent = "SignUp"
+    })
+} else{
+    item1.forEach(item11 => {
+        item11.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.textContent = "Login"
+    })
+    asideItem1.forEach(asideItem11 => {
+        asideItem11.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.textContent = "Login"
     })
 }
 
