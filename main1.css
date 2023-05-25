@@ -460,6 +460,7 @@ aside #_sl button:focus{
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 50px;
+    overflow: hidden;
 }
 #services .service-item .icon{
     height: 50px;
@@ -481,6 +482,26 @@ aside #_sl button:focus{
     z-index: 1;
     overflow: hidden;
 }
+
+#services .service-item:nth-child(odd){
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: all 200ms ease-in;
+}
+#services .service-item:nth-child(even){
+    transform: translateX(200px);
+    opacity: 0;
+    transition: all 200ms ease-in;
+}
+#services .service-item:nth-child(odd).show{
+    transform: translateX(0);
+    opacity: 1;
+}
+#services .service-item:nth-child(even).show{
+    transform: translateX(0);
+    opacity: 1;
+}
+
 #services .service-item::after{
     content: '';
     position: absolute;
@@ -669,6 +690,12 @@ aside #_sl button:focus{
     }
     #services .service-bottom{
         flex-direction: column;
+    }
+    #services .service-item:nth-child(odd){
+        transform: translateX(-50px);
+    }
+    #services .service-item:nth-child(even){
+        transform: translateX(50px);
     }
     #contact .contact-body{
         flex-direction: column;

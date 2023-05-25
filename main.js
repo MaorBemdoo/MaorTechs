@@ -222,7 +222,7 @@ if(localStorage.getItem("MaorTechsUserData") == null || JSON.parse(localStorage.
     })
 }
 
-console.log("Testing...")
+
 // const item1 = document.querySelectorAll(".item1-item");
 // item1.addEventListener("click", (e) => {
 //     console.log(e.target)
@@ -239,23 +239,22 @@ console.log("Testing...")
 // const header = document.getElementsByTagName("nav")[0];
 // const navLinks = document.getElementsByClassName("nav-item1")[0];
 // const hero = document.getElementById("hero")
-// const options = {
+const serviceItems = document.querySelectorAll("#services .service-item")
+const options = {
+    threshold: 0.5
     // rootMargin: "-150px 0px 0px 0px"
-// }
+}
 
-// const observer = new IntersectionObserver((entries, observer) => {
-//     entries.forEach(entry => {
-//         if(!entry.isIntersecting){
-//             header.classList.add("bg-primary")
-//         } else{
-//             header.classList.remove("bg-primary")
-//         }
-//         // console.log(entry.target)
-//     })
-// }, options)
-// sections.forEach(section => {
-//     observer.observe(section)
-// })
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting)
+        // console.log(entry)
+    })
+}, options)
+
+serviceItems.forEach(serviceItem => {
+    observer.observe(serviceItem)
+})
 
 // window.onscroll = function(){
 //     const top1 = window.scrollY
@@ -266,3 +265,5 @@ console.log("Testing...")
 //         header.classList.remove("bg-primary")
 //     }
 // }
+
+console.log("Testing...")
