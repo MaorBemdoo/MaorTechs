@@ -204,7 +204,7 @@ if(localStorage.getItem("MaorTechsUserData") == null || JSON.parse(localStorage.
     let scrollY = window.scrollY
     const LoginModal = document.getElementsByClassName("LoginM")[0]
     // if(scrollY >= 709){
-    //     LoginModal.st
+    //     LoginModal.classList.add("visible")
     // }
     item1.forEach(item11 => {
         item11.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.textContent = "SignUp"
@@ -215,7 +215,7 @@ if(localStorage.getItem("MaorTechsUserData") == null || JSON.parse(localStorage.
     })
 } else{
     item1.forEach(item11 => {
-        item11.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.textContent = "Login"
+        item11.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.textContent = "Logout"
     })
     asideItem1.forEach(asideItem11 => {
         asideItem11.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.textContent = "Login"
