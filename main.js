@@ -165,35 +165,35 @@ const asideItem1 = document.querySelectorAll("#_sl a h2");
 window.onscroll = (e) => {
     let scroll = window.scrollY
     item1.forEach(item => {
-        if(scroll > 723 && scroll < 1733){
+        if(scroll >= 795 && scroll < 1731){
             // item.classList.add("activeNav")
             item.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.remove("activeNav")
             item.parentNode.parentNode.firstElementChild.firstElementChild.classList.add("activeNav")
             item.parentNode.parentNode.firstElementChild.nextElementSibling.firstElementChild.classList.remove("activeNav")
-        } else if(scroll > 1734 && scroll < 2434){
+        } else if(scroll >= 1731 && scroll < 2526){
             item.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.remove("activeNav")
             item.parentNode.parentNode.firstElementChild.firstElementChild.classList.remove("activeNav")
             item.parentNode.parentNode.firstElementChild.nextElementSibling.firstElementChild.classList.add("activeNav")
-        } else if(scroll > 2435){
+        } else if(scroll >= 2526){
             item.parentNode.parentNode.firstElementChild.nextElementSibling.firstElementChild.classList.remove("activeNav")
             item.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.add("activeNav")
-        } else if(scroll < 641){
+        } else if(scroll < 795){
             item.classList.remove("activeNav")
         }
     })
     asideItem1.forEach(asideItem => {
-        if(scroll < 641){
+        if(scroll < 795){
             asideItem.parentNode.parentNode.firstElementChild.firstElementChild.classList.add("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.firstElementChild.classList.remove("activeNav")
-        } else if(scroll > 723 && scroll < 1733){
+        } else if(scroll >= 795 && scroll < 1731){
             asideItem.parentNode.parentNode.firstElementChild.firstElementChild.classList.remove("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.firstElementChild.classList.add("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.remove("activeNav")
-        } else if(scroll > 1734 && scroll < 2434){
+        } else if(scroll >= 1731 && scroll < 2526){
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.firstElementChild.classList.remove("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.add("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.classList.remove("activeNav")
-        } else if(scroll > 2435){
+        } else if(scroll >= 2526){
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.remove("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.classList.add("activeNav")
         }
