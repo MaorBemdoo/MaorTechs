@@ -44,12 +44,15 @@ function validateEmail(e) {
 }
 
 function validatePassword(e) {
+    let PasswordShowHide = document.getElementById("togglePassword")
     let SignUpPassword = document.getElementById("P")
     if (SignUpPassword.value.length < 8) {
         document.getElementById("PP").innerHTML = "Password should be more than 8 characters"
+        PasswordShowHide.style.top = "40%"
         SignUpPassword.classList.add("form__input--error")
         e.preventDefault()
     } else{
+        PasswordShowHide.style.top = "50%"
         document.getElementById("PP").innerHTML = ""
         SignUpPassword.classList.remove("form__input--error")
     }
