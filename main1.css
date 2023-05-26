@@ -100,17 +100,36 @@ noscript{
 }
 
 .LoginM{
-    visibility: hidden;
     display: grid;
     place-items: center;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 10000000;
     height: 200px;
     width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
 }
+
+.LoginM-btn{
+    background-color: crimson;
+    border: none;
+    border-radius: 7px;
+    padding: .3em;
+    font-size: 2rem; 
+    cursor: pointer;
+}
+
+/* .LoginMO{
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 500ms ease-in;
+} */
 
 .item1-item{
     color:white; 

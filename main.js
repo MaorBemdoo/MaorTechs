@@ -200,14 +200,27 @@ window.onscroll = (e) => {
     })
 }
 
+const sections = document.querySelectorAll("section");
+const header = document.getElementsByTagName("nav")[0];
+const footer = document.getElementsByTagName("footer")[0]
 if(localStorage.getItem("MaorTechsUserData") == null || JSON.parse(localStorage.getItem("MaorTechsUserData")).UserName == ""){
-    let scrollY = window.scrollY
-    const LoginModal = document.getElementsByClassName("LoginM")[0]
-    // if(scrollY >= 709){
-    //     LoginModal.classList.add("visible")
-    // }
+    window.onscroll = () => {
+        let scrollY = window.scrollY
+        const LoginModal = document.getElementById("lM")
+        if(scrollY > 709){
+            LoginModal.classList.remove("d-none")
+            sections.forEach(section => {
+                section.style.filter = "blur(7px)"
+                section.style.pointerEvents = "none"
+            })
+            header.style.filter = "blur(7px)"
+            header.style.pointerEvents = "none"
+            footer.style.filter = "blur(7px)"
+            footer.style.pointerEvents = "none"
+    }
+    }
     item1.forEach(item11 => {
-        item11.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.textContent = "SignUp"
+        item11.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.textContent = "Signup"
         // item11.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.insertAdjacentElement(10, '<a href="Login.html" class="item1-item" style="color:crimson;"><h2>Login</h2></a>')
     })
     asideItem1.forEach(asideItem11 => {
