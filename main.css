@@ -139,9 +139,9 @@ body{
 
 #togglePassword{
     position: absolute;
-    top: 23px;
+    top: 50%;
+    right: 20px;
     transform: translateY(-50%);
-    margin-left: 300px;
     width: 30px;
     height: 30px;
     background: url(Hide.png);
