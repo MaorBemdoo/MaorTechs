@@ -166,37 +166,36 @@ sideBarLinks.forEach(link => {
 const item1 = document.querySelectorAll(".item1-item h2");
 const asideItem1 = document.querySelectorAll("#_sl a h2");
 window.onscroll = (e) => {
-    let scroll = window.scrollY
     item1.forEach(item => {
-        if(scroll >= 795 && scroll < 1731){
+        if(scrollY >= 795 && scrollY < 1731){
             // item.classList.add("activeNav")
             item.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.remove("activeNav")
             item.parentNode.parentNode.firstElementChild.firstElementChild.classList.add("activeNav")
             item.parentNode.parentNode.firstElementChild.nextElementSibling.firstElementChild.classList.remove("activeNav")
-        } else if(scroll >= 1731 && scroll < 2526){
+        } else if(scrollY >= 1731 && scrollY < 2526){
             item.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.remove("activeNav")
             item.parentNode.parentNode.firstElementChild.firstElementChild.classList.remove("activeNav")
             item.parentNode.parentNode.firstElementChild.nextElementSibling.firstElementChild.classList.add("activeNav")
-        } else if(scroll >= 2526){
+        } else if(scrollY >= 2526){
             item.parentNode.parentNode.firstElementChild.nextElementSibling.firstElementChild.classList.remove("activeNav")
             item.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.add("activeNav")
-        } else if(scroll < 795){
+        } else if(scrollY < 795){
             item.classList.remove("activeNav")
         }
     })
     asideItem1.forEach(asideItem => {
-        if(scroll < 795){
+        if(scrollY < 795){
             asideItem.parentNode.parentNode.firstElementChild.firstElementChild.classList.add("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.firstElementChild.classList.remove("activeNav")
-        } else if(scroll >= 795 && scroll < 1731){
+        } else if(scrollY >= 795 && scrollY < 1731){
             asideItem.parentNode.parentNode.firstElementChild.firstElementChild.classList.remove("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.firstElementChild.classList.add("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.remove("activeNav")
-        } else if(scroll >= 1731 && scroll < 2526){
+        } else if(scrollY >= 1731 && scrollY < 2526){
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.firstElementChild.classList.remove("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.add("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.classList.remove("activeNav")
-        } else if(scroll >= 2526){
+        } else if(scrollY >= 2526){
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.classList.remove("activeNav")
             asideItem.parentNode.parentNode.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.classList.add("activeNav")
         }
@@ -208,7 +207,6 @@ const header = document.getElementsByTagName("nav")[0];
 const footer = document.getElementsByTagName("footer")[0]
 if(localStorage.getItem("MaorTechsUserData") == null || JSON.parse(localStorage.getItem("MaorTechsUserData")).UserName == ""){
     window.onscroll = () => {
-        let scrollY = window.scrollY
         const LoginModal = document.getElementById("lM")
         if(scrollY > 709){
             LoginModal.classList.remove("d-none")
